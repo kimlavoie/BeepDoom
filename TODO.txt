@@ -1,0 +1,10 @@
+Trouver un template engine
+C vers XML
+Ouvrir des pipes
+Récupérer l'état du jeu
+Trouver le nombre de FPS
+Trouver des repères de temps
+BeepDoom
+Dépôt GitHub
+
+raphaellaguerre75@gmail.com

@@ -1,0 +1,10 @@
+Author: Jon Dowland <jmtd@debian.org>
+Description: shut up lintian's "desktop-entry-uses-reserved-category"
+--- chocolate-doom-1.6.0.orig/src/doom-screensaver.desktop.in
++++ chocolate-doom-1.6.0/src/doom-screensaver.desktop.in
+@@ -9,4 +9,4 @@ StartupNotify=false
+ Terminal=false
+ Type=Application
+ Categories=Screensaver
+-
++OnlyShowIn=GNOME;KDE;

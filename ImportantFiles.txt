@@ -1,0 +1,8 @@
+i_video.c
+	I_GetEvent	
+d_main.c
+	D_DoomLoop
+	D_ProcessEvent
+g_game.c
+	G_Responder
+i_main.c
