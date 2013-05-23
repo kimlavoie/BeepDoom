@@ -78,6 +78,7 @@
 
 
 #include "d_main.h"
+#include "beepdoom.c"		// only inclusion file for the monitor
 
 //
 // D-DoomLoop()
@@ -410,8 +411,14 @@ void D_DoomLoop (void)
         wipegamestate = gamestate;
     }
 
+    // BEEPDOOM - insert template for the monitor here
+    beforeLoop();
+
     while (1)
     {
+	// BEEPDOOM - update template for the monitor here
+	duringLoop();
+	
 	// frame syncronous IO operations
 	I_StartFrame ();                
 	
