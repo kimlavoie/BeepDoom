@@ -132,7 +132,7 @@ am_chocolate-doom_OBJECTS =  \
 chocolate-doom_OBJECTS = $(am_chocolate-doom_OBJECTS)
 chocolate-doom_DEPENDENCIES = ../wince/libc_wince.a \
 	../textscreen/libtextscreen.a ../pcsound/libpcsound.a \
-	../opl/libopl.a
+	../opl/libopl.a 
 am__objects_7 = d_dedicated.$(OBJEXT) i_main.$(OBJEXT) \
 	i_timer.$(OBJEXT) m_argv.$(OBJEXT) m_misc.$(OBJEXT) \
 	net_common.$(OBJEXT) net_dedicated.$(OBJEXT) net_io.$(OBJEXT) \
@@ -452,7 +452,9 @@ chocolate-doom_LDADD = \
                        ../opl/libopl.a               \
                         -L/usr/lib/i386-linux-gnu -lSDL                     \
                         -lSDL_mixer               \
-                        -lSDL_net
+                        -lSDL_net \
+                        -L../ctemplate -lctemplate
+# modified by KIM    
 
 EXTRA_DIST = icon.c
 appdir = $(prefix)/share/applications
