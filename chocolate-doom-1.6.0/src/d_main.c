@@ -76,6 +76,7 @@
 #include "p_setup.h"
 #include "r_local.h"
 
+#include "timestats.h"
 
 #include "d_main.h"
 

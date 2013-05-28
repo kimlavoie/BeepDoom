@@ -85,7 +85,7 @@ am__chocolate-doom_SOURCES_DIST = am_map.c am_map.h d_englsh.h \
 	net_sdl.c net_sdl.h net_server.c net_server.h net_structrw.c \
 	net_structrw.h w_merge.c w_merge.h i_pcsound.c i_sdlsound.c \
 	i_sdlmusic.c i_oplmusic.c midifile.c midifile.h mus2mid.c \
-	mus2mid.h resource.rc
+	mus2mid.h timestats.c timestats.h resource.rc
 am__objects_1 = am_map.$(OBJEXT) d_items.$(OBJEXT) d_iwad.$(OBJEXT) \
 	d_main.$(OBJEXT) d_net.$(OBJEXT) doomdef.$(OBJEXT) \
 	doomstat.$(OBJEXT) dstrings.$(OBJEXT) f_finale.$(OBJEXT) \
@@ -387,7 +387,8 @@ w_file.c             w_file.h              \
 w_file_stdc.c                              \
 w_file_posix.c                             \
 w_file_win32.c                             \
-z_zone.c             z_zone.h   
+z_zone.c             z_zone.h              \
+timestats.c          timestats.h  
 
 
 # source files needed for FEATURE_DEHACKED
