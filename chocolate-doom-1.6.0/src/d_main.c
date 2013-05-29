@@ -413,6 +413,7 @@ void D_DoomLoop (void)
 
     while (1)
     {
+	timeBeginLoop()
 	// frame syncronous IO operations
 	I_StartFrame ();                
 	
@@ -439,6 +440,7 @@ void D_DoomLoop (void)
 	// Update display, next frame, with current state.
         if (screenvisible)
             D_Display ();
+	timeEndLoop()
     }
 }
 
