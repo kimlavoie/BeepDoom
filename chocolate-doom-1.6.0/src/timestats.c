@@ -41,6 +41,6 @@ void timeEndLoop()
     strcat(messAll,messFPS);
     strcat(messAll," CPU : ");
     strcat(messAll,messCPU);
-    players[consoleplayer].message = messAll ; //TEST : On affiche le FPS et le CPU time sur l'interface du joueur en haut à gauche.
+    players[consoleplayer].message = messAll; //TEST : On affiche le FPS et le CPU time sur l'interface du joueur en haut à gauche.
 }
 
