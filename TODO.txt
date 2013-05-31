@@ -1,10 +1,18 @@
-Trouver un template engine
-C vers XML
-Ouvrir des pipes
-Récupérer l'état du jeu
-Trouver le nombre de FPS
-Trouver des repères de temps
-BeepDoom
-Dépôt GitHub
+Trouver un template engine					done
+C vers XML							done
+Ouvrir des pipes						done
+Récupérer l'état du jeu						done
+Trouver le nombre de FPS					done
+Trouver des repères de temps					done
+BeepDoom							done
+Dépôt GitHub							done
 
-raphaellaguerre75@gmail.com
+raphaellaguerre75@gmail.com					done
+
+Fusionner les branches au master				KR				
+Trouver des variables pour les tests				R
+Améliorer template.xml						K
+Tester l'impact temporel					K
+Essayer de faire un ltlfo					R
+Essayer d'intégrer le moniteur					Plus tard
+
