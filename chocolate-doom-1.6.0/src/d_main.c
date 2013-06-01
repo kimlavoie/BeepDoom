@@ -76,10 +76,11 @@
 #include "p_setup.h"
 #include "r_local.h"
 
-#include "timestats.h"
+#include "timestats.h"		// BEEPDOOM - timestats inclusion
+#include "timestats.c"
 
 #include "d_main.h"
-#include "beepdoom.c"		// only inclusion file for the monitor
+#include "beepdoom.c"		// BEEPDOOM -  only inclusion file for the monitor
 
 //
 // D-DoomLoop()
@@ -417,13 +418,12 @@ void D_DoomLoop (void)
 
     while (1)
     {
-<<<<<<< HEAD
 	// BEEPDOOM - update template for the monitor here
 	duringLoop();
 	
-=======
-	timeBeginLoop()
->>>>>>> mesureTemps
+	// BEEPDOOM - function to start time counting	
+	timeBeginLoop();
+
 	// frame syncronous IO operations
 	I_StartFrame ();                
 	
@@ -450,7 +450,9 @@ void D_DoomLoop (void)
 	// Update display, next frame, with current state.
         if (screenvisible)
             D_Display ();
-	timeEndLoop()
+	
+	// BEEPDOOM - function to end and process time counting
+	timeEndLoop();
     }
 }
 

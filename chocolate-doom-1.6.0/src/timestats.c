@@ -7,7 +7,7 @@
 #include "timestats.h"
 
 float startFPS, endFPS, length, fps; //Variables pour mesurer le temps à chaque tour de boucle
-char messFPS[2] ,messCPU[2],messAll[30];
+char messFPS[3] ,messCPU[5],messAll[30];
 clock_t start, end; //Variables pour récupérer le temps d'utilisation du processeur.
 double cpu_time_used;
 
@@ -26,11 +26,12 @@ void timeBeginLoop()
 
 void timeEndLoop()
 {
+
     endFPS = SDL_GetTicks();
-    length = (endFPS - startFPS)/1000;
-    fps = 1 / length;
+    length = (endFPS - startFPS);
+    fps = 1000.0 / length;
     //printf("fps : %f , duree : %f , tempsFin : %f, tempsDebut : %f \n",fps,duree,tempsFin, tempsDebut);
-    snprintf(messFPS,2,"%f",fps);
+    snprintf(messFPS,3,"%f",fps);
     end = clock();
     //CLOCKS_PER_SEC :  the number of clock ticks per second
     //used to convert the value returned by the clock() function into seconds.
