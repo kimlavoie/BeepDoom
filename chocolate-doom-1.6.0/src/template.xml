@@ -1,3 +1,107 @@
-<message>
-<TMPL_VAR name="test" />
-</message>
+<game>
+	<player>
+		<health>
+			<TMPL_VAR name="playerHealth" />
+		</health>
+		<armor>
+			<TMPL_VAR name="armor" />
+		</armor>
+		<weapons>
+			<pistol>
+				<ammos>
+					<TMPL_VAR name="pistolAmmos" />
+				</ammos>
+			</pistol>
+			<shotgun>
+				<owned>
+					<TMPL_VAR name="shotgunOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="shotgunAmmos" />
+				</ammos>
+			</shotgun>
+			<chaingun>
+				<owned>
+					<TMPL_VAR name="chaingunOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="chaingunAmmos" />
+				</ammos>
+			</chaingun>
+			<missile>
+				<owned>
+					<TMPL_VAR name="missileOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="missileAmmos" />
+				</ammos>
+
+			</missile>
+			<plasma>
+				<owned>
+					<TMPL_VAR name="plasmaOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="plasmaAmmos" />
+				</ammos>
+			</plasma>
+			<bfg>
+				<owned>
+					<TMPL_VAR name="bfgOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="bfgAmmos" />
+				</ammos>
+			</bfg>
+			<chainsaw>
+				<owned>
+					<TMPL_VAR name="chainsawOwned" />
+				</owned>
+			</chainsaw>
+			<superShotgun>
+				<owned>
+					<TMPL_VAR name="superShotgunOwned" />
+				</owned>
+				<ammos>
+					<TMPL_VAR name="superShotgunAmmos" />
+				</ammos>
+			</superShotgun>
+		</weapons>
+		<actualWeapon>
+			<TMPL_VAR name="actualWeapon" />
+		</actualWeapon>
+		<attacking>
+			<TMPL_VAR name="attacking" />
+		</attacking>
+		<position>
+			<x>
+				<TMPL_VAR name="playerX" />
+			</x>
+			<y>
+				<TMPL_VAR name="playerY" />
+			</y>
+			<z>
+				<TMPL_VAR name="playerZ" />
+			</z>
+		</position>
+		<action>
+			<TMPL_VAR name="action" />
+		</action>
+	</player>
+	<attacker>
+		<position>
+			<health>
+				<TMPL_VAR name="attackerHealth" />
+			</health>
+			<x>
+				<TMPL_VAR name="attackerX" />
+			</x>
+			<y>
+				<TMPL_VAR name="attackerY" />
+			</y>
+			<z>
+				<TMPL_VAR name="attackerZ" />
+			</z>
+		</position>
+	</attacker>
+</game>

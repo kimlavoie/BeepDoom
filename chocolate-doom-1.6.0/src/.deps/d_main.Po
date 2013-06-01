@@ -46,7 +46,8 @@ d_main.o: d_main.c /usr/include/ctype.h /usr/include/features.h \
  m_misc.h m_menu.h p_saveg.h i_system.h i_timer.h i_video.h g_game.h \
  hu_stuff.h wi_stuff.h st_stuff.h m_cheat.h am_map.h net_client.h \
  net_defs.h net_dedicated.h net_query.h p_setup.h r_local.h r_main.h \
- r_bsp.h r_segs.h r_plane.h r_things.h r_draw.h d_main.h beepdoom.c \
+ r_bsp.h r_segs.h r_plane.h r_things.h r_draw.h timestats.h timestats.c \
+ /usr/include/i386-linux-gnu/bits/timex.h d_main.h beepdoom.c \
  ../ctemplate/ctemplate.h
 
 /usr/include/ctype.h:
@@ -278,6 +279,12 @@ r_plane.h:
 r_things.h:
 
 r_draw.h:
+
+timestats.h:
+
+timestats.c:
+
+/usr/include/i386-linux-gnu/bits/timex.h:
 
 d_main.h:
 
