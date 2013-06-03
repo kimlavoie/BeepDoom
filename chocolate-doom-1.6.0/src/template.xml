@@ -89,10 +89,10 @@
 		</action>
 	</player>
 	<attacker>
+		<health>
+			<TMPL_VAR name="attackerHealth" />
+		</health>
 		<position>
-			<health>
-				<TMPL_VAR name="attackerHealth" />
-			</health>
 			<x>
 				<TMPL_VAR name="attackerX" />
 			</x>
