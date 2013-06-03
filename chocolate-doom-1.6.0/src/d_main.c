@@ -77,7 +77,7 @@
 #include "r_local.h"
 
 #include "timestats.h"		// BEEPDOOM - timestats inclusion
-#include "timestats.c"
+//#include "timestats.c"
 
 #include "d_main.h"
 #include "beepdoom.c"		// BEEPDOOM -  only inclusion file for the monitor
@@ -418,11 +418,11 @@ void D_DoomLoop (void)
 
     while (1)
     {
-	// BEEPDOOM - update template for the monitor here
-	duringLoop();
-	
 	// BEEPDOOM - function to start time counting	
 	timeBeginLoop();
+
+	// BEEPDOOM - update template for the monitor here
+	duringLoop();	
 
 	// frame syncronous IO operations
 	I_StartFrame ();                

@@ -75,17 +75,17 @@ am__chocolate-doom_SOURCES_DIST = am_map.c am_map.h d_englsh.h \
 	st_stuff.h tables.c tables.h v_video.c v_video.h wi_stuff.c \
 	wi_stuff.h w_checksum.c w_checksum.h w_wad.c w_wad.h w_file.c \
 	w_file.h w_file_stdc.c w_file_posix.c w_file_win32.c z_zone.c \
-	z_zone.h deh_ammo.c deh_cheat.c deh_defs.h deh_frame.c \
-	deh_io.c deh_io.h deh_main.c deh_main.h deh_mapping.c \
-	deh_mapping.h deh_misc.c deh_misc.h deh_ptr.c deh_sound.c \
-	deh_text.c deh_thing.c deh_weapon.c net_client.c net_client.h \
-	net_common.c net_common.h net_dedicated.c net_dedicated.h \
-	net_defs.h net_gui.c net_gui.h net_io.c net_io.h net_loop.c \
-	net_loop.h net_packet.c net_packet.h net_query.c net_query.h \
-	net_sdl.c net_sdl.h net_server.c net_server.h net_structrw.c \
-	net_structrw.h w_merge.c w_merge.h i_pcsound.c i_sdlsound.c \
-	i_sdlmusic.c i_oplmusic.c midifile.c midifile.h mus2mid.c \
-	mus2mid.h timestats.c timestats.h resource.rc
+	z_zone.h timestats.c timestats.h deh_ammo.c deh_cheat.c \
+	deh_defs.h deh_frame.c deh_io.c deh_io.h deh_main.c deh_main.h \
+	deh_mapping.c deh_mapping.h deh_misc.c deh_misc.h deh_ptr.c \
+	deh_sound.c deh_text.c deh_thing.c deh_weapon.c net_client.c \
+	net_client.h net_common.c net_common.h net_dedicated.c \
+	net_dedicated.h net_defs.h net_gui.c net_gui.h net_io.c \
+	net_io.h net_loop.c net_loop.h net_packet.c net_packet.h \
+	net_query.c net_query.h net_sdl.c net_sdl.h net_server.c \
+	net_server.h net_structrw.c net_structrw.h w_merge.c w_merge.h \
+	i_pcsound.c i_sdlsound.c i_sdlmusic.c i_oplmusic.c midifile.c \
+	midifile.h mus2mid.c mus2mid.h resource.rc
 am__objects_1 = am_map.$(OBJEXT) d_items.$(OBJEXT) d_iwad.$(OBJEXT) \
 	d_main.$(OBJEXT) d_net.$(OBJEXT) doomdef.$(OBJEXT) \
 	doomstat.$(OBJEXT) dstrings.$(OBJEXT) f_finale.$(OBJEXT) \
@@ -109,7 +109,7 @@ am__objects_1 = am_map.$(OBJEXT) d_items.$(OBJEXT) d_iwad.$(OBJEXT) \
 	st_stuff.$(OBJEXT) tables.$(OBJEXT) v_video.$(OBJEXT) \
 	wi_stuff.$(OBJEXT) w_checksum.$(OBJEXT) w_wad.$(OBJEXT) \
 	w_file.$(OBJEXT) w_file_stdc.$(OBJEXT) w_file_posix.$(OBJEXT) \
-	w_file_win32.$(OBJEXT) z_zone.$(OBJEXT)
+	w_file_win32.$(OBJEXT) z_zone.$(OBJEXT) timestats.$(OBJEXT)
 am__objects_2 = deh_ammo.$(OBJEXT) deh_cheat.$(OBJEXT) \
 	deh_frame.$(OBJEXT) deh_io.$(OBJEXT) deh_main.$(OBJEXT) \
 	deh_mapping.$(OBJEXT) deh_misc.$(OBJEXT) deh_ptr.$(OBJEXT) \
@@ -132,7 +132,7 @@ am_chocolate-doom_OBJECTS =  \
 chocolate-doom_OBJECTS = $(am_chocolate-doom_OBJECTS)
 chocolate-doom_DEPENDENCIES = ../wince/libc_wince.a \
 	../textscreen/libtextscreen.a ../pcsound/libpcsound.a \
-	../opl/libopl.a 
+	../opl/libopl.a
 am__objects_7 = d_dedicated.$(OBJEXT) i_main.$(OBJEXT) \
 	i_timer.$(OBJEXT) m_argv.$(OBJEXT) m_misc.$(OBJEXT) \
 	net_common.$(OBJEXT) net_dedicated.$(OBJEXT) net_io.$(OBJEXT) \
@@ -178,11 +178,11 @@ DATA = $(app_DATA) $(screensaver_DATA)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run tar
-AUTOCONF = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run automake-1.11
+ACLOCAL = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run tar
+AUTOCONF = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -204,11 +204,11 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LDFLAGS =  -L/usr/lib/i386-linux-gnu -lSDL
+LDFLAGS =  -L/usr/lib -lSDL
 LIBOBJS = 
 LIBS = -lm 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = chocolate-doom
@@ -231,17 +231,17 @@ SDLNET_CFLAGS =
 SDLNET_LIBS =  -lSDL_net
 SDL_CFLAGS = -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT
 SDL_CONFIG = /usr/bin/sdl-config
-SDL_LIBS = -L/usr/lib/i386-linux-gnu -lSDL
+SDL_LIBS = -L/usr/lib -lSDL
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 1.6.0
 WINDOWS_RC_VERSION = 1, 6, 0, 0
 WINDRES = 
-abs_builddir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/src
-abs_srcdir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/src
-abs_top_builddir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0
-abs_top_srcdir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0
+abs_builddir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/src
+abs_srcdir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/src
+abs_top_builddir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0
+abs_top_srcdir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0
 ac_aux_dir = autotools
 ac_ct_CC = gcc
 am__include = include
@@ -261,7 +261,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/install-sh
+install_sh = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -300,7 +300,7 @@ net_structrw.c       net_structrw.h        \
 z_native.c           z_zone.h
 
 chocolate-server_SOURCES = $(DEDSERV_FILES)
-chocolate-server_LDADD = ../wince/libc_wince.a  -L/usr/lib/i386-linux-gnu -lSDL  -lSDL_net 
+chocolate-server_LDADD = ../wince/libc_wince.a  -L/usr/lib -lSDL  -lSDL_net 
 MAIN_SOURCE_FILES = \
 am_map.c             am_map.h              \
 d_englsh.h                                 \
@@ -388,7 +388,7 @@ w_file_stdc.c                              \
 w_file_posix.c                             \
 w_file_win32.c                             \
 z_zone.c             z_zone.h              \
-timestats.c          timestats.h  
+timestats.c          timestats.h
 
 
 # source files needed for FEATURE_DEHACKED
@@ -451,11 +451,11 @@ chocolate-doom_LDADD = \
                        ../textscreen/libtextscreen.a \
                        ../pcsound/libpcsound.a       \
                        ../opl/libopl.a               \
-                        -L/usr/lib/i386-linux-gnu -lSDL                     \
+                        -L/usr/lib -lSDL                     \
                         -lSDL_mixer               \
-                        -lSDL_net \
-                        -L../ctemplate -lctemplate
-# modified by KIM    
+                        -lSDL_net                 \
+			-L../ctemplate -lctemplate
+#BEEPDOOM
 
 EXTRA_DIST = icon.c
 appdir = $(prefix)/share/applications
@@ -644,6 +644,7 @@ include ./$(DEPDIR)/sounds.Po
 include ./$(DEPDIR)/st_lib.Po
 include ./$(DEPDIR)/st_stuff.Po
 include ./$(DEPDIR)/tables.Po
+include ./$(DEPDIR)/timestats.Po
 include ./$(DEPDIR)/v_video.Po
 include ./$(DEPDIR)/w_checksum.Po
 include ./$(DEPDIR)/w_file.Po
@@ -929,7 +930,7 @@ icon.c : ../data/doom8.ico
 	../data/convert-icon $^ $@
 
 midiread : midifile.c
-	$(CC) -DTEST $(CFLAGS)  -L/usr/lib/i386-linux-gnu -lSDL $^ -o $@
+	$(CC) -DTEST $(CFLAGS)  -L/usr/lib -lSDL $^ -o $@
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

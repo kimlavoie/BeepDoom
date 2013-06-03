@@ -104,11 +104,11 @@ DATA = $(app_DATA)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run tar
-AUTOCONF = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run automake-1.11
+ACLOCAL = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run tar
+AUTOCONF = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -130,11 +130,11 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LDFLAGS =  -L/usr/lib/i386-linux-gnu -lSDL
+LDFLAGS =  -L/usr/lib -lSDL
 LIBOBJS = 
 LIBS = -lm 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = chocolate-doom
@@ -157,17 +157,17 @@ SDLNET_CFLAGS =
 SDLNET_LIBS =  -lSDL_net
 SDL_CFLAGS = -I/usr/include/SDL -D_GNU_SOURCE=1 -D_REENTRANT
 SDL_CONFIG = /usr/bin/sdl-config
-SDL_LIBS = -L/usr/lib/i386-linux-gnu -lSDL
+SDL_LIBS = -L/usr/lib -lSDL
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 1.6.0
 WINDOWS_RC_VERSION = 1, 6, 0, 0
 WINDRES = 
-abs_builddir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/setup
-abs_srcdir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/setup
-abs_top_builddir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0
-abs_top_srcdir = /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0
+abs_builddir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/setup
+abs_srcdir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/setup
+abs_top_builddir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0
+abs_top_srcdir = /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0
 ac_aux_dir = autotools
 ac_ct_CC = gcc
 am__include = include
@@ -187,7 +187,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/kim/Jeux/BeepDoom/chocolate-doom-1.6.0/autotools/install-sh
+install_sh = ${SHELL} /home/raphaellaguerre/projetUQAC/BeepDoom/BeepDoom/chocolate-doom-1.6.0/autotools/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -234,7 +234,7 @@ chocolate-setup_LDADD = \
                        ../wince/libc_wince.a         \
                        ../textscreen/libtextscreen.a \
                         -lSDL_mixer               \
-                        -L/usr/lib/i386-linux-gnu -lSDL
+                        -L/usr/lib -lSDL
 
 appdir = $(prefix)/share/applications
 app_DATA = chocolate-setup.desktop

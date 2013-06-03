@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../ctemplate/ctemplate.h"
+#include "timestats.h"
 
 FILE* pipeFile;
 TMPL_varlist *variableList;
 player_t *mainPlayer;
+//Variables pour tester l'impact temporel de l'isntrumentation
+extern float endInstruFPS;
+extern clock_t endInstruCPU;
 
 void beforeLoop()
 {
@@ -28,5 +32,9 @@ void duringLoop()
 	// TMPL_write 's purpose is to output the text in a file (in our case, the pipe)
 	// TMPL_write(templateFilename, 0, 0, list, outputFile, errorsOutputFile)
 	TMPL_write("template.xml", 0, 0, variableList, pipeFile, 0);
+
+	//Time 
+	endInstruFPS = SDL_GetTicks();
+	endInstruCPU = clock();
 }
 

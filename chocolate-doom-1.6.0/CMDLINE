@@ -83,19 +83,6 @@ present in Vanilla Doom.
   -spechit <n>            Use the specified magic value when emulating 
                           spechit overruns.
 
-=== Demo options ===
-
-  -longtics         Record a high resolution "Doom 1.91" demo.  
-
-  -maxdemo <size>   Specify the demo buffer size (KiB)  
-
-  -playdemo <demo>  Play back the demo named demo.lmp.  
-
-  -record <x>       Record a demo named x.lmp.  
-
-  -timedemo <demo>  Play back the demo named demo.lmp, determining the 
-                    framerate of the screen.
-
 === Display options ===
 
   -1               Don't scale up the screen.  
@@ -133,6 +120,19 @@ present in Vanilla Doom.
   -width <x>       Specify the screen width, in pixels.  
 
   -window          Run in a window.
+
+=== Demo options ===
+
+  -longtics         Record a high resolution "Doom 1.91" demo.  
+
+  -maxdemo <size>   Specify the demo buffer size (KiB)  
+
+  -playdemo <demo>  Play back the demo named demo.lmp.  
+
+  -record <x>       Record a demo named x.lmp.  
+
+  -timedemo <demo>  Play back the demo named demo.lmp, determining the 
+                    framerate of the screen.
 
 === Networking options ===
 
