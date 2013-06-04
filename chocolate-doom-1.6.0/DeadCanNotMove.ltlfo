@@ -1,0 +1,7 @@
+# ------------------------------------------------------------------
+# Example property to test Beepbeep with Chocolate-Doom 
+# ------------------------------------------------------------------
+
+G (∀ x ∈ message/player[health=0]/position/x : ∀ y ∈ message/player[health=0]/position/y : ∀ z ∈ message/player[health=0]/position/z  : (
+	X (∀ xx ∈ message/player/position/x: ∀ yy ∈ message/player/position/y : ∀ zz ∈ message/player/position/z :(
+		(x = xx) ∧ (y = yy) ∧ (z = zz)))))

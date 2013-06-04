@@ -40,7 +40,7 @@
 			<y> <TMPL_VAR name="playerY" /> </y>
 			<z> <TMPL_VAR name="playerZ" /> </z>
 		</position>
-		<action><TMPL_VAR name="action" /></action>
+		<action> <TMPL_VAR name="action" /> </action>
 	</player>
 	<attacker>
 		<health> <TMPL_VAR name="attackerHealth" /> </health>
