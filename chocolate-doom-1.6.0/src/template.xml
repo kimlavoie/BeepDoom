@@ -1,4 +1,4 @@
-<game>
+<frame>
 	<player>
 		<health> <TMPL_VAR name="playerHealth" /> </health>
 		<armor> <TMPL_VAR name="armor" /> </armor>
@@ -50,4 +50,4 @@
 			<z> <TMPL_VAR name="attackerZ" /> </z>
 		</position>
 	</attacker>
-</game>
+</frame>

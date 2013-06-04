@@ -1,6 +1,6 @@
-cat pipe.pipe > log.txt;
+rm log.xml;
 while((0 != 1))
 do
-cat pipe.pipe >> log.txt;
+cat pipe.pipe >> log.xml;
 done
 
