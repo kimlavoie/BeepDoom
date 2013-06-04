@@ -8,21 +8,18 @@ player_t *mainPlayer;
 
 char bufferPlayerHealth[4];
 char bufferArmor[4];
-char bufferPistolAmmos[4];
+char bufferClipAmmos[4];
 char bufferShotgunOwned[2];
-char bufferShotgunAmmos[4];
+char bufferShellAmmos[4];
 char bufferChaingunOwned[2];
-char bufferChaingunAmmos[4];
 char bufferMissileOwned[2];
 char bufferMissileAmmos[4];
 char bufferPlasmaOwned[2];
-char bufferPlasmaAmmos[4];
+char bufferCellAmmos[4];
 char bufferBfgOwned[2];
-char bufferBfgAmmos[4];
 char bufferChainsawOwned[2];
 char bufferSuperShotgunOwned[2];
-char bufferSuperShotgunAmmos[4];
-char bufferActualWeapon[2];
+char bufferActualWeapon[13];
 char bufferAttacking[2];
 char bufferPlayerX[10];
 char bufferPlayerY[10];
@@ -45,24 +42,51 @@ void duringLoop()
 	// snprint(buffer, buffersize, "%d", intToConvert) 
 	snprintf(bufferPlayerHealth, 4, "%d", (mainPlayer->health));
 	snprintf(bufferArmor, 4, "%d", (mainPlayer->armorpoints));
-	snprintf(bufferPistolAmmos, 4, "%d", (mainPlayer->ammo[wp_pistol]));
-	snprintf(bufferShotgunAmmos, 4, "%d", (mainPlayer->ammo[wp_shotgun]));
-	snprintf(bufferChaingunAmmos, 4, "%d", (mainPlayer->ammo[wp_chaingun]));
-	snprintf(bufferMissileAmmos, 4, "%d", (mainPlayer->ammo[wp_missile]));
-	snprintf(bufferPlasmaAmmos, 4, "%d", (mainPlayer->ammo[wp_plasma]));
-	snprintf(bufferBfgAmmos, 4, "%d", (mainPlayer->ammo[wp_bfg]));
-	snprintf(bufferSuperShotgunAmmos, 4, "%d", (mainPlayer->ammo[wp_supershotgun]));
-	snprintf(bufferActualWeapon, 2, "%d", (mainPlayer->readyweapon));
+	snprintf(bufferClipAmmos, 4, "%d", (mainPlayer->ammo[am_clip]));
+	snprintf(bufferShellAmmos, 4, "%d", (mainPlayer->ammo[am_shell]));
+	snprintf(bufferMissileAmmos, 4, "%d", (mainPlayer->ammo[am_misl]));
+	snprintf(bufferCellAmmos, 4, "%d", (mainPlayer->ammo[am_cell]));
+	
+	switch(mainPlayer->readyweapon){
+			case wp_fist:
+				snprintf(bufferActualWeapon, 13, "fist");
+				break;
+			case wp_pistol:
+				snprintf(bufferActualWeapon, 13, "pistol");
+				break;
+			case wp_shotgun:
+				snprintf(bufferActualWeapon, 13, "shotgun");
+				break;
+			case wp_chaingun:
+				snprintf(bufferActualWeapon, 13, "chaingun");
+				break;
+			case wp_missile:
+				snprintf(bufferActualWeapon, 13, "missile");
+				break;
+			case wp_plasma:
+				snprintf(bufferActualWeapon, 13, "plasma");
+				break;
+			case wp_bfg:
+				snprintf(bufferActualWeapon, 13, "bfg");
+				break;
+			case wp_chainsaw:
+				snprintf(bufferActualWeapon, 13, "chainsaw");
+				break;
+			case wp_supershotgun:
+				snprintf(bufferActualWeapon, 13, "supershotgun");
+				break;
+	}
 
 	if(mainPlayer->mo != 0){
-		snprintf(bufferPlayerX, 10, "%f", (mainPlayer->mo->momx));
-		snprintf(bufferPlayerY, 10, "%f", (mainPlayer->mo->momy));
-		snprintf(bufferPlayerZ, 10, "%f", (mainPlayer->mo->momz));
+		snprintf(bufferPlayerX, 10, "%d", (mainPlayer->mo->x));
+		snprintf(bufferPlayerY, 10, "%d", (mainPlayer->mo->y));
+		snprintf(bufferPlayerZ, 10, "%d", (mainPlayer->mo->z));
 	}
 	if(mainPlayer->attacker != 0){
-		snprintf(bufferAttackerX, 10, "%f", (mainPlayer->attacker->x));
-		snprintf(bufferAttackerY, 10, "%f", (mainPlayer->attacker->y));
-		snprintf(bufferAttackerZ, 10, "%f", (mainPlayer->attacker->z));
+		snprintf(bufferAttackerX, 10, "%d", (mainPlayer->attacker->x));
+		snprintf(bufferAttackerY, 10, "%d", (mainPlayer->attacker->y));
+		snprintf(bufferAttackerZ, 10, "%d", (mainPlayer->attacker->z));
+		snprintf(bufferAttackerHealth, 4, "%d", (mainPlayer->attacker->health));
 	}
 
 	bufferShotgunOwned[0] = (mainPlayer->weaponowned[wp_shotgun] ? 'T' : 'F');
@@ -90,20 +114,20 @@ void duringLoop()
 	// TMPL_add_var(list, varName1, value1, varName2, value2, ..., 0)
 	variableList = TMPL_add_var(0, "playerHealth", bufferPlayerHealth, 0);
 	variableList = TMPL_add_var(variableList, "armor", bufferArmor, 0);
-	variableList = TMPL_add_var(variableList, "pistolAmmos", bufferPistolAmmos, 0);
+	variableList = TMPL_add_var(variableList, "pistolAmmos", bufferClipAmmos, 0);
 	variableList = TMPL_add_var(variableList, "shotgunOwned", bufferShotgunOwned, 0);
-	variableList = TMPL_add_var(variableList, "shotgunAmmos", bufferShotgunAmmos, 0);
+	variableList = TMPL_add_var(variableList, "shotgunAmmos", bufferShellAmmos, 0);
 	variableList = TMPL_add_var(variableList, "chaingunOwned", bufferChaingunOwned, 0);
-	variableList = TMPL_add_var(variableList, "chaingunAmmos", bufferChaingunAmmos, 0);
+	variableList = TMPL_add_var(variableList, "chaingunAmmos", bufferClipAmmos, 0);
 	variableList = TMPL_add_var(variableList, "missileOwned", bufferMissileOwned, 0);
 	variableList = TMPL_add_var(variableList, "missileAmmos", bufferMissileAmmos, 0);
 	variableList = TMPL_add_var(variableList, "plasmaOwned", bufferPlasmaOwned, 0);
-	variableList = TMPL_add_var(variableList, "plasmaAmmos", bufferPlasmaAmmos, 0);
+	variableList = TMPL_add_var(variableList, "plasmaAmmos", bufferCellAmmos, 0);
 	variableList = TMPL_add_var(variableList, "bfgOwned", bufferBfgOwned, 0);
-	variableList = TMPL_add_var(variableList, "bfgAmmos", bufferBfgAmmos, 0);
+	variableList = TMPL_add_var(variableList, "bfgAmmos", bufferCellAmmos, 0);
 	variableList = TMPL_add_var(variableList, "chainsawOwned", bufferChainsawOwned, 0);
 	variableList = TMPL_add_var(variableList, "superShotgunOwned", bufferSuperShotgunOwned, 0);
-	variableList = TMPL_add_var(variableList, "superShotgunAmmos", bufferSuperShotgunAmmos, 0);
+	variableList = TMPL_add_var(variableList, "superShotgunAmmos", bufferShellAmmos, 0);
 	variableList = TMPL_add_var(variableList, "actualWeapon", bufferActualWeapon, 0);
 	variableList = TMPL_add_var(variableList, "attacking", bufferAttacking, 0);
 	variableList = TMPL_add_var(variableList, "playerX", bufferPlayerX, 0);

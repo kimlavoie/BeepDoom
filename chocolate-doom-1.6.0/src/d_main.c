@@ -418,11 +418,12 @@ void D_DoomLoop (void)
 
     while (1)
     {
-	// BEEPDOOM - update template for the monitor here
-	duringLoop();
 	
 	// BEEPDOOM - function to start time counting	
 	timeBeginLoop();
+
+	// BEEPDOOM - update template for the monitor here
+	duringLoop();
 
 	// frame syncronous IO operations
 	I_StartFrame ();                
@@ -450,6 +451,7 @@ void D_DoomLoop (void)
 	// Update display, next frame, with current state.
         if (screenvisible)
             D_Display ();
+
 	
 	// BEEPDOOM - function to end and process time counting
 	timeEndLoop();

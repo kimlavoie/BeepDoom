@@ -9,7 +9,7 @@ Dépôt GitHub							done
 
 raphaellaguerre75@gmail.com					done
 
-Fusionner les branches au master				KR				
+Fusionner les branches au master				done				
 Trouver des variables pour les tests				R
 Améliorer template.xml						K
 Tester l'impact temporel					K

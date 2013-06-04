@@ -455,7 +455,7 @@ chocolate-doom_LDADD = \
                         -lSDL_mixer               \
                         -lSDL_net \
                         -L../ctemplate -lctemplate
-# modified by KIM    
+# BEEPDOOM modified by KIM    
 
 EXTRA_DIST = icon.c
 appdir = $(prefix)/share/applications
