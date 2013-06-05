@@ -3,35 +3,43 @@
 		<health> <TMPL_VAR name="playerHealth" /> </health>
 		<armor> <TMPL_VAR name="armor" /> </armor>
 		<weapons>
-			<pistol>
+			<weapon>
+				<name>pistol</name>				
 				<ammos> <TMPL_VAR name="pistolAmmos" /> </ammos>
-			</pistol>
-			<shotgun>
+			</weapon>
+			</weapon>
+				<name>shotgun</name>
 				<owned> <TMPL_VAR name="shotgunOwned" /> </owned>
 				<ammos> <TMPL_VAR name="shotgunAmmos" /> </ammos>
-			</shotgun>
-			<chaingun>
+			</weaponn>
+			<weaponn>
+				<name>chaingun</name>
 				<owned> <TMPL_VAR name="chaingunOwned" /> </owned>
 				<ammos> <TMPL_VAR name="chaingunAmmos" /> </ammos>
-			</chaingun>
-			<missile>
+			</weapon>
+			<weapon>
+				<name>missile</name>
 				<owned> <TMPL_VAR name="missileOwned" /> </owned>
 				<ammos> <TMPL_VAR name="missileAmmos" /> </ammos>
-			</missile>
-			<plasma>
+			</weapon>
+			<weapon>
+				<name>plasma</name>
 				<owned> <TMPL_VAR name="plasmaOwned" /> </owned>
 				<ammos> <TMPL_VAR name="plasmaAmmos" /> </ammos>
-			</plasma>
-			<bfg>
+			</weapon>
+			<weapon>
+				<name>bfg</name>
 				<owned> <TMPL_VAR name="bfgOwned" /> </owned>
 				<ammos> <TMPL_VAR name="bfgAmmos" /> <bfg>
-			<chainsaw>
+			<weapon>
+				<name>chainsaw</name>
 				<owned> <TMPL_VAR name="chainsawOwned" /> </owned>
-			</chainsaw>
-			<superShotgun>
+			</weapon>
+			<weapon>
+				<name>superShotgun</name>
 				<owned> <TMPL_VAR name="superShotgunOwned" /> </owned>
 				<ammos> <TMPL_VAR name="superShotgunAmmos" /> </ammos>
-			</superShotgun>
+			</weapon>
 		</weapons>
 		<actualWeapon> <TMPL_VAR name="actualWeapon" /> </actualWeapon>
 		<attacking> <TMPL_VAR name="attacking" /> </attacking>
