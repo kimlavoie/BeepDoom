@@ -117,7 +117,7 @@ void duringLoop()
 		
 		struct mobj_s* ennemy = mainPlayer->mo->sprev;
 		while(ennemy != 0){
-			if(ennemy->flags & MF_SHOOTABLE){
+			if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL )){
 				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
 				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
 
@@ -134,7 +134,7 @@ void duringLoop()
 
 		ennemy = mainPlayer->mo->snext;
 		while(ennemy != 0){
-			if(ennemy->flags & MF_SHOOTABLE){
+			if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL )){
 				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
 				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
 
