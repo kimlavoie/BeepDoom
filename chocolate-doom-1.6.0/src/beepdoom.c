@@ -21,13 +21,13 @@ char bufferChainsawOwned[2];
 char bufferSuperShotgunOwned[2];
 char bufferActualWeapon[13];
 char bufferAttacking[2];
-char bufferPlayerX[10];
-char bufferPlayerY[10];
-char bufferPlayerZ[10];
+char bufferPlayerX[20];
+char bufferPlayerY[20];
+char bufferPlayerZ[20];
 char bufferAttackerHealth[4];
-char bufferAttackerX[10];
-char bufferAttackerY[10];
-char bufferAttackerZ[10];
+char bufferAttackerX[20];
+char bufferAttackerY[20];
+char bufferAttackerZ[20];
 char bufferAction[2];
 
 void beforeLoop()
@@ -79,15 +79,15 @@ void duringLoop()
 		}
 
 		
-		snprintf(bufferPlayerX, 10, "%d", (mainPlayer->mo->x));
-		snprintf(bufferPlayerY, 10, "%d", (mainPlayer->mo->y));
-		snprintf(bufferPlayerZ, 10, "%d", (mainPlayer->mo->z));
+		snprintf(bufferPlayerX, 20, "%d", (mainPlayer->mo->x));
+		snprintf(bufferPlayerY, 20, "%d", (mainPlayer->mo->y));
+		snprintf(bufferPlayerZ, 20, "%d", (mainPlayer->mo->z));
 		
 		
 		if(mainPlayer->attacker != 0){
-			snprintf(bufferAttackerX, 10, "%d", (mainPlayer->attacker->x));
-			snprintf(bufferAttackerY, 10, "%d", (mainPlayer->attacker->y));
-			snprintf(bufferAttackerZ, 10, "%d", (mainPlayer->attacker->z));
+			snprintf(bufferAttackerX, 20, "%d", (mainPlayer->attacker->x));
+			snprintf(bufferAttackerY, 20, "%d", (mainPlayer->attacker->y));
+			snprintf(bufferAttackerZ, 20, "%d", (mainPlayer->attacker->z));
 			snprintf(bufferAttackerHealth, 4, "%d", (mainPlayer->attacker->health));
 		}
 
@@ -110,6 +110,45 @@ void duringLoop()
 		bufferSuperShotgunOwned[1] = '\0';	
 		bufferAttacking[1] = '\0';	
 		bufferAction[1] = '\0';	
+		
+		TMPL_varlist* tempVarlist = 0;
+		TMPL_loop* loop = 0;
+		char bufferEnnemy[20];
+		
+		struct mobj_s* ennemy = mainPlayer->mo->sprev;
+		while(ennemy != 0){
+			if(ennemy->flags & MF_SHOOTABLE){
+				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
+				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
+
+				snprintf(bufferEnnemy, 20, "%d", ennemy->y);
+				tempVarlist = TMPL_add_var(tempVarlist, "ennemyY", bufferEnnemy, 0);
+				
+				snprintf(bufferEnnemy, 20, "%d", ennemy->z);
+				tempVarlist = TMPL_add_var(tempVarlist, "ennemyZ", bufferEnnemy, 0);
+
+				loop = TMPL_add_varlist(loop, tempVarlist);
+			}
+			ennemy = ennemy->sprev;
+		}
+
+		ennemy = mainPlayer->mo->snext;
+		while(ennemy != 0){
+			if(ennemy->flags & MF_SHOOTABLE){
+				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
+				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
+
+				snprintf(bufferEnnemy, 20, "%d", ennemy->y);
+				tempVarlist = TMPL_add_var(tempVarlist, "ennemyY", bufferEnnemy, 0);
+				
+				snprintf(bufferEnnemy, 20, "%d", ennemy->z);
+				tempVarlist = TMPL_add_var(tempVarlist, "ennemyZ", bufferEnnemy, 0);
+
+				loop = TMPL_add_varlist(loop, tempVarlist);
+
+			}
+			ennemy = ennemy->snext;
+		}
 
 		// TMPL_add_var add a variable to the list in the first parameter and return the list.
 		// if the first param is 0, it create a TMPL_varlist and return it.
@@ -140,11 +179,13 @@ void duringLoop()
 		variableList = TMPL_add_var(variableList, "attackerZ", bufferAttackerZ, 0);
 		variableList = TMPL_add_var(variableList, "attackerHealth", bufferAttackerHealth, 0);
 		variableList = TMPL_add_var(variableList, "action", bufferAction, 0);
-
+		variableList = TMPL_add_loop(variableList, "ennemyLoop", loop);
 
 		// TMPL_write 's purpose is to output the text in a file (in our case, the pipe)
 		// TMPL_write(templateFilename, 0, 0, list, outputFile, errorsOutputFile)
 		TMPL_write("template.xml", 0, 0, variableList, pipeFile, 0);
+	
+		TMPL_free_varlist(variableList);
 	}
 }
 

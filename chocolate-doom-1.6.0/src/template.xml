@@ -50,4 +50,13 @@
 			<z> <TMPL_VAR name="attackerZ" /> </z>
 		</position>
 	</attacker>
+	<ennemies>
+		<TMPL_LOOP name="ennemyLoop">
+		<ennemy>
+			<x> <TMPL_VAR name="ennemyX" /> </x>
+			<y> <TMPL_VAR name="ennemyY" /> </y>
+			<z> <TMPL_VAR name="ennemyZ" /> </z>
+		</ennemy>
+		</TMPL_LOOP>
+	</ennemies>
 </message>
