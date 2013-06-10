@@ -117,6 +117,35 @@ void duringLoop()
 		TMPL_loop* loop = 0;
 		char bufferEnnemy[20];
 		
+		int indexSector;
+		mobj_t* ennemy;
+		for(indexSector = 0; indexSector<numsectors; indexSector++){
+			sector_t *secteur = &sectors[indexSector];
+			ennemy = secteur->thinglist;
+			while(ennemy != 0){
+				if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL ) && (ennemy != mainPlayer->mo)){
+					snprintf(bufferEnnemy, 20 , "%d", ennemy);
+					tempVarlist = TMPL_add_var(0, "ennemyId", bufferEnnemy, 0);
+
+					snprintf(bufferEnnemy, 20, "%d", ennemy->target);
+					tempVarlist = TMPL_add_var(tempVarlist, "targetId", bufferEnnemy, 0);
+
+					snprintf(bufferEnnemy, 20, "%d", ennemy->x);
+					tempVarlist = TMPL_add_var(tempVarlist, "ennemyX", bufferEnnemy, 0);
+
+					snprintf(bufferEnnemy, 20, "%d", ennemy->y);
+					tempVarlist = TMPL_add_var(tempVarlist, "ennemyY", bufferEnnemy, 0);
+				
+					snprintf(bufferEnnemy, 20, "%d", ennemy->z);
+					tempVarlist = TMPL_add_var(tempVarlist, "ennemyZ", bufferEnnemy, 0);
+
+					loop = TMPL_add_varlist(loop, tempVarlist);
+				}
+				
+				ennemy = ennemy->snext;
+			}
+		}		
+/*
 		struct mobj_s* ennemy = mainPlayer->mo->sprev;
 		while(ennemy != 0){
 			if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL )){
@@ -157,7 +186,7 @@ void duringLoop()
 			}
 			ennemy = ennemy->snext;
 		}
-
+*/
 		// TMPL_add_var add a variable to the list in the first parameter and return the list.
 		// if the first param is 0, it create a TMPL_varlist and return it.
 		// TMPL_add_var(list, varName1, value1, varName2, value2, ..., 0)

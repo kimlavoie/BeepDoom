@@ -54,6 +54,7 @@
 	<ennemies>
 		<TMPL_LOOP name="ennemyLoop">
 		<ennemy>
+			<id> <TMPL_VAR name="ennemyId" /> </id>
 			<targetId> <TMPL_VAR name="targetId" /> </targetId>
 			<x> <TMPL_VAR name="ennemyX" /> </x>
 			<y> <TMPL_VAR name="ennemyY" /> </y>
