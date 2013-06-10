@@ -1,0 +1,62 @@
+<message>
+	<player>
+		<health> <TMPL_VAR name="playerHealth" /> </health>
+		<armor> <TMPL_VAR name="armor" /> </armor>
+		<weapons>
+			<weapon>
+				<name>pistol</name>				
+				<ammos> <TMPL_VAR name="pistolAmmos" /> </ammos>
+			</weapon>
+			</weapon>
+				<name>shotgun</name>
+				<owned> <TMPL_VAR name="shotgunOwned" /> </owned>
+				<ammos> <TMPL_VAR name="shotgunAmmos" /> </ammos>
+			</weaponn>
+			<weaponn>
+				<name>chaingun</name>
+				<owned> <TMPL_VAR name="chaingunOwned" /> </owned>
+				<ammos> <TMPL_VAR name="chaingunAmmos" /> </ammos>
+			</weapon>
+			<weapon>
+				<name>missile</name>
+				<owned> <TMPL_VAR name="missileOwned" /> </owned>
+				<ammos> <TMPL_VAR name="missileAmmos" /> </ammos>
+			</weapon>
+			<weapon>
+				<name>plasma</name>
+				<owned> <TMPL_VAR name="plasmaOwned" /> </owned>
+				<ammos> <TMPL_VAR name="plasmaAmmos" /> </ammos>
+			</weapon>
+			<weapon>
+				<name>bfg</name>
+				<owned> <TMPL_VAR name="bfgOwned" /> </owned>
+				<ammos> <TMPL_VAR name="bfgAmmos" /> <bfg>
+			<weapon>
+				<name>chainsaw</name>
+				<owned> <TMPL_VAR name="chainsawOwned" /> </owned>
+			</weapon>
+			<weapon>
+				<name>superShotgun</name>
+				<owned> <TMPL_VAR name="superShotgunOwned" /> </owned>
+				<ammos> <TMPL_VAR name="superShotgunAmmos" /> </ammos>
+			</weapon>
+		</weapons>
+		<actualWeapon> <TMPL_VAR name="actualWeapon" /> </actualWeapon>
+		<attacking> <TMPL_VAR name="attacking" /> </attacking>
+		<justHit> <TMPL_VAR name="justHit"/> </justHit>
+		<position>
+			<x> <TMPL_VAR name="playerX" /> </x>
+			<y> <TMPL_VAR name="playerY" /> </y>
+			<z> <TMPL_VAR name="playerZ" /> </z>
+		</position>
+		<action><TMPL_VAR name="action" /></action>
+	</player>
+	<attacker>
+		<health> <TMPL_VAR name="attackerHealth" /> </health>
+		<position>
+			<x> <TMPL_VAR name="attackerX" /> </x>
+			<y> <TMPL_VAR name="attackerY" /> </y>
+			<z> <TMPL_VAR name="attackerZ" /> </z>
+		</position>
+	</attacker>
+</message>

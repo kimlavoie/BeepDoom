@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="All" />
-	<File name="../src/d_think.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/p_inter.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1581" topLine="33" />
-		</Cursor>
-	</File>
-	<File name="../src/deh_frame.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2284" topLine="61" />
-		</Cursor>
-	</File>
-	<File name="../src/m_menu.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="34114" topLine="1868" />
-		</Cursor>
-	</File>
-	<File name="../src/d_ticcmd.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1148" topLine="8" />
-		</Cursor>
-	</File>
-	<File name="../src/p_enemy.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16723" topLine="906" />
-		</Cursor>
-	</File>
-	<File name="../src/p_mobj.h" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="8499" topLine="268" />
+			<Cursor1 position="18724" topLine="893" />
 		</Cursor>
 	</File>
 	<File name="../src/g_game.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -36,9 +11,49 @@
 			<Cursor1 position="28617" topLine="1206" />
 		</Cursor>
 	</File>
-	<File name="../src/d_player.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/d_player.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1172" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="../src/doomdef.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4733" topLine="215" />
+		</Cursor>
+	</File>
+	<File name="../src/d_ticcmd.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1148" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="../src/d_main.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4758" topLine="287" />
+		</Cursor>
+	</File>
+	<File name="../src/info.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="19371" topLine="1142" />
+		</Cursor>
+	</File>
+	<File name="../src/d_think.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1581" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="../src/m_menu.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="34114" topLine="1868" />
+		</Cursor>
+	</File>
+	<File name="../src/beepdoom.c" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2382" topLine="70" />
+		</Cursor>
+	</File>
+	<File name="../src/doomtype.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="61" />
 		</Cursor>
 	</File>
 	<File name="../src/doomkeys.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -46,39 +61,29 @@
 			<Cursor1 position="2013" topLine="67" />
 		</Cursor>
 	</File>
-	<File name="../src/info.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/deh_frame.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2284" topLine="61" />
+		</Cursor>
+	</File>
+	<File name="../src/p_mobj.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4744" topLine="126" />
+		</Cursor>
+	</File>
+	<File name="../src/p_enemy.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3937" topLine="194" />
+		</Cursor>
+	</File>
+	<File name="../src/info.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="19290" topLine="591" />
 		</Cursor>
 	</File>
-	<File name="../src/p_inter.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="16041" topLine="780" />
-		</Cursor>
-	</File>
-	<File name="../src/info.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19371" topLine="1142" />
-		</Cursor>
-	</File>
-	<File name="../src/d_main.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4758" topLine="287" />
-		</Cursor>
-	</File>
-	<File name="../src/doomdef.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4733" topLine="215" />
-		</Cursor>
-	</File>
-	<File name="../src/p_saveg.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="../src/p_saveg.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="16704" topLine="882" />
-		</Cursor>
-	</File>
-	<File name="../src/doomtype.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="61" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

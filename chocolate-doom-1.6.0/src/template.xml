@@ -43,6 +43,7 @@
 		</weapons>
 		<actualWeapon> <TMPL_VAR name="actualWeapon" /> </actualWeapon>
 		<attacking> <TMPL_VAR name="attacking" /> </attacking>
+		<justHit> <TMPL_VAR name="justHit" /> </justHit>
 		<position>
 			<x> <TMPL_VAR name="playerX" /> </x>
 			<y> <TMPL_VAR name="playerY" /> </y>

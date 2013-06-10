@@ -8,7 +8,7 @@ si plus de 50 "rockets"
 si plus de 300 "cells"
 si moins de 0 (santé, armure, bullets, shells, rockets, cells)
 si 0 de santé et vivant
-si on tire, qu'on n'est pas en train de ramasser    des balles et que le nombre de balles après >= nombre de balles avant
+si on tire, qu'on n'est pas en train de ramasser des balles et que le nombre de balles après >= nombre de balles avant
 si on est atteint et que santé après >= santé avant
 si le nombre de balles = 0 et qu'on tire
 si on presse `espace` devant une porte et qu'elle ne s'ouvre pas

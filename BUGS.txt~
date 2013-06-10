@@ -1,0 +1,21 @@
+Idées de bugs à "monitorer":
+----------------------------
+si plus que 200 d'armures
+si plus que 200 de santé
+si plus de 200 "bullets"
+si plus de 50 "shells"
+si plus de 50 "rockets"
+si plus de 300 "cells"
+si moins de 0 (santé, armure, bullets, shells, rockets, cells)
+si 0 de santé et vivant
+si on tire, qu'on n'est pas en train de ramasser    des balles et que le nombre de balles après >= nombre de balles avant
+si on est atteint et que santé après >= santé avant
+si le nombre de balles = 0 et qu'on tire
+si on presse `espace` devant une porte et qu'elle ne s'ouvre pas
+si santé >= 100 et qu'on prend une trousse de santé
+si armure >= 100 et qu'on prend une armure verte
+si ennemi avant est mort et ennemi après est vivant (l'ennemi ressuscite)
+si on tire sur l'ennemi et que sa santé avant >= sa santé après
+ne pas traverser les murs
+ouvrir une porte sans la clé
+	

@@ -1,11 +1,11 @@
-net_query.o: net_query.c /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
- /usr/include/stdlib.h /usr/include/features.h \
- /usr/include/i386-linux-gnu/bits/predefs.h \
+net_query.o: net_query.c \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h /usr/include/stdlib.h \
+ /usr/include/features.h /usr/include/i386-linux-gnu/bits/predefs.h \
  /usr/include/i386-linux-gnu/sys/cdefs.h \
  /usr/include/i386-linux-gnu/bits/wordsize.h \
  /usr/include/i386-linux-gnu/gnu/stubs.h \
  /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
  /usr/include/i386-linux-gnu/bits/waitflags.h \
  /usr/include/i386-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
  /usr/include/i386-linux-gnu/bits/endian.h \
@@ -17,15 +17,14 @@ net_query.o: net_query.c /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
  /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h i_system.h d_ticcmd.h \
  doomtype.h /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/i386-linux-gnu/bits/posix1_lim.h \
  /usr/include/i386-linux-gnu/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/i386-linux-gnu/bits/posix2_lim.h \
@@ -42,7 +41,7 @@ net_query.o: net_query.c /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
  doomkeys.h net_packet.h net_io.h net_query.h net_structrw.h md5.h \
  net_sdl.h
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
 
 /usr/include/stdlib.h:
 
@@ -58,7 +57,7 @@ net_query.o: net_query.c /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
 
 /usr/include/i386-linux-gnu/gnu/stubs-32.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
 
 /usr/include/i386-linux-gnu/bits/waitflags.h:
 
@@ -88,8 +87,6 @@ net_query.o: net_query.c /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
 
 /usr/include/i386-linux-gnu/bits/time.h:
 
-/usr/include/i386-linux-gnu/bits/select2.h:
-
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
@@ -106,15 +103,15 @@ doomtype.h:
 
 /usr/include/inttypes.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
 
 /usr/include/stdint.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 

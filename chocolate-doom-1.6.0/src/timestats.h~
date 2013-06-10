@@ -1,0 +1,12 @@
+#ifndef TIMESTATS_H_INCLUDED
+#define TIMESTATS_H_INCLUDED
+
+//Variables pour tester l'impact temporel de l'isntrumentation
+extern float endInstruFPS;
+extern clock_t endInstruCPU;
+
+void timeBeginLoop(void);
+
+void timeEndLoop(void);
+
+#endif // TIMESTATS_H_INCLUDED

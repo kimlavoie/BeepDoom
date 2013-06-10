@@ -29,6 +29,7 @@ char bufferAttackerX[10];
 char bufferAttackerY[10];
 char bufferAttackerZ[10];
 char bufferAction[2];
+char bufferJustHit[2];
 
 void beforeLoop()
 {
@@ -37,16 +38,16 @@ void beforeLoop()
 }
 
 void duringLoop()
-{	
+{
 	// convert an int in char[]
-	// snprint(buffer, buffersize, "%d", intToConvert) 
+	// snprint(buffer, buffersize, "%d", intToConvert)
 	snprintf(bufferPlayerHealth, 4, "%d", (mainPlayer->health));
 	snprintf(bufferArmor, 4, "%d", (mainPlayer->armorpoints));
 	snprintf(bufferClipAmmos, 4, "%d", (mainPlayer->ammo[am_clip]));
 	snprintf(bufferShellAmmos, 4, "%d", (mainPlayer->ammo[am_shell]));
 	snprintf(bufferMissileAmmos, 4, "%d", (mainPlayer->ammo[am_misl]));
 	snprintf(bufferCellAmmos, 4, "%d", (mainPlayer->ammo[am_cell]));
-	
+
 	switch(mainPlayer->readyweapon){
 			case wp_fist:
 				snprintf(bufferActualWeapon, 13, "fist");
@@ -81,6 +82,8 @@ void duringLoop()
 		snprintf(bufferPlayerX, 10, "%d", (mainPlayer->mo->x));
 		snprintf(bufferPlayerY, 10, "%d", (mainPlayer->mo->y));
 		snprintf(bufferPlayerZ, 10, "%d", (mainPlayer->mo->z));
+		bufferJustHit[0] = (mainPlayer->mo->flags & MF_JUSTHIT ? 'T' : 'F');
+		bufferJustHit[1] = '\0';
 	}
 	if(mainPlayer->attacker != 0){
 		snprintf(bufferAttackerX, 10, "%d", (mainPlayer->attacker->x));
@@ -99,15 +102,17 @@ void duringLoop()
 	bufferAttacking[0] = (mainPlayer->attackdown ? 'T' : 'F');
 	bufferAction[0] = (mainPlayer->usedown ? 'T' : 'F');
 
-	bufferShotgunOwned[1] = '\0';	
-	bufferChaingunOwned[1] = '\0';	
-	bufferMissileOwned[1] = '\0';	
-	bufferPlasmaOwned[1] = '\0';	
-	bufferBfgOwned[1] = '\0';	
-	bufferChainsawOwned[1] = '\0';	
-	bufferSuperShotgunOwned[1] = '\0';	
-	bufferAttacking[1] = '\0';	
-	bufferAction[1] = '\0';	
+
+	bufferShotgunOwned[1] = '\0';
+	bufferChaingunOwned[1] = '\0';
+	bufferMissileOwned[1] = '\0';
+	bufferPlasmaOwned[1] = '\0';
+	bufferBfgOwned[1] = '\0';
+	bufferChainsawOwned[1] = '\0';
+	bufferSuperShotgunOwned[1] = '\0';
+	bufferAttacking[1] = '\0';
+	bufferAction[1] = '\0';
+
 
 	// TMPL_add_var add a variable to the list in the first parameter and return the list.
 	// if the first param is 0, it create a TMPL_varlist and return it.
@@ -130,6 +135,7 @@ void duringLoop()
 	variableList = TMPL_add_var(variableList, "superShotgunAmmos", bufferShellAmmos, 0);
 	variableList = TMPL_add_var(variableList, "actualWeapon", bufferActualWeapon, 0);
 	variableList = TMPL_add_var(variableList, "attacking", bufferAttacking, 0);
+	variableList = TMPL_add_var(variableList, "justHit", bufferJustHit, 0);
 	variableList = TMPL_add_var(variableList, "playerX", bufferPlayerX, 0);
 	variableList = TMPL_add_var(variableList, "playerY", bufferPlayerY, 0);
 	variableList = TMPL_add_var(variableList, "playerZ", bufferPlayerZ, 0);
@@ -138,6 +144,7 @@ void duringLoop()
 	variableList = TMPL_add_var(variableList, "attackerZ", bufferAttackerZ, 0);
 	variableList = TMPL_add_var(variableList, "attackerHealth", bufferAttackerHealth, 0);
 	variableList = TMPL_add_var(variableList, "action", bufferAction, 0);
+
 
 
 	// TMPL_write 's purpose is to output the text in a file (in our case, the pipe)
