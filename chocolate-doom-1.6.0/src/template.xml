@@ -1,5 +1,6 @@
 <message>
 	<player>
+		<id> <TMPL_VAR name="playerId" /> </id>
 		<health> <TMPL_VAR name="playerHealth" /> </health>
 		<armor> <TMPL_VAR name="armor" /> </armor>
 		<weapons>
@@ -53,6 +54,7 @@
 	<ennemies>
 		<TMPL_LOOP name="ennemyLoop">
 		<ennemy>
+			<targetId> <TMPL_VAR name="targetId" /> </targetId>
 			<x> <TMPL_VAR name="ennemyX" /> </x>
 			<y> <TMPL_VAR name="ennemyY" /> </y>
 			<z> <TMPL_VAR name="ennemyZ" /> </z>

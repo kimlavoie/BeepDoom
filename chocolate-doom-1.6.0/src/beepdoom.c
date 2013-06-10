@@ -6,6 +6,7 @@ FILE* pipeFile;
 TMPL_varlist *variableList;
 player_t *mainPlayer;
 
+char bufferPlayerId[20];
 char bufferPlayerHealth[4];
 char bufferArmor[4];
 char bufferClipAmmos[4];
@@ -41,6 +42,7 @@ void duringLoop()
 	if(mainPlayer->mo != 0){
 		// convert an int in char[]
 		// snprint(buffer, buffersize, "%d", intToConvert) 
+		snprintf(bufferPlayerId, 20, "%d", mainPlayer->mo);
 		snprintf(bufferPlayerHealth, 4, "%d", (mainPlayer->health));
 		snprintf(bufferArmor, 4, "%d", (mainPlayer->armorpoints));
 		snprintf(bufferClipAmmos, 4, "%d", (mainPlayer->ammo[am_clip]));
@@ -118,8 +120,11 @@ void duringLoop()
 		struct mobj_s* ennemy = mainPlayer->mo->sprev;
 		while(ennemy != 0){
 			if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL )){
+				snprintf(bufferEnnemy, 20, "%d", ennemy->target);
+				tempVarlist = TMPL_add_var(0, "targetId", bufferEnnemy, 0);
+
 				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
-				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
+				tempVarlist = TMPL_add_var(tempVarlist, "ennemyX", bufferEnnemy, 0);
 
 				snprintf(bufferEnnemy, 20, "%d", ennemy->y);
 				tempVarlist = TMPL_add_var(tempVarlist, "ennemyY", bufferEnnemy, 0);
@@ -135,6 +140,9 @@ void duringLoop()
 		ennemy = mainPlayer->mo->snext;
 		while(ennemy != 0){
 			if((ennemy->flags & MF_SHOOTABLE) && (ennemy->type != MT_BARREL )){
+				snprintf(bufferEnnemy, 20, "%d", ennemy->target);
+				tempVarlist = TMPL_add_var(0, "targetAdress", bufferEnnemy, 0);
+
 				snprintf(bufferEnnemy, 20, "%d", ennemy->x);
 				tempVarlist = TMPL_add_var(0, "ennemyX", bufferEnnemy, 0);
 
@@ -153,7 +161,8 @@ void duringLoop()
 		// TMPL_add_var add a variable to the list in the first parameter and return the list.
 		// if the first param is 0, it create a TMPL_varlist and return it.
 		// TMPL_add_var(list, varName1, value1, varName2, value2, ..., 0)
-		variableList = TMPL_add_var(0, "playerHealth", bufferPlayerHealth, 0);
+		variableList = TMPL_add_var(0, "playerId", bufferPlayerId, 0);
+		variableList = TMPL_add_var(variableList, "playerHealth", bufferPlayerHealth, 0);
 		variableList = TMPL_add_var(variableList, "armor", bufferArmor, 0);
 		variableList = TMPL_add_var(variableList, "pistolAmmos", bufferClipAmmos, 0);
 		variableList = TMPL_add_var(variableList, "shotgunOwned", bufferShotgunOwned, 0);
