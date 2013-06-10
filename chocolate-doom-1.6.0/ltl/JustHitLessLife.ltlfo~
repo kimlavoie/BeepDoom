@@ -1,0 +1,7 @@
+# ------------------------------------------------------------------
+# player lose life after being hit by an enemy
+#
+# @Caption("D7");
+# ------------------------------------------------------------------
+
+ G(∀x ∈ message/player[justHit=F]/health : (X(∀y ∈ message/player[justHit=T]/health : (x = y))))
