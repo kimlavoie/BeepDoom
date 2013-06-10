@@ -4,5 +4,5 @@
 # @Caption("D8");
 # ------------------------------------------------------------------
 
-G(∀x ∈ /message/player/id : (∀y ∈ message/ennemies/targetId : (x=y))) 
+G(∀x ∈ /message/player/id : (∀y ∈ message/ennemies/ennemy/targetId : ((x=y) ∨ (y=0)))) 
 

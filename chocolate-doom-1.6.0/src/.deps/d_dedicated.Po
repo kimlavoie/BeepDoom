@@ -4,7 +4,7 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
  /usr/include/i386-linux-gnu/bits/wordsize.h \
  /usr/include/i386-linux-gnu/gnu/stubs.h \
  /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
  /usr/include/i386-linux-gnu/bits/waitflags.h \
  /usr/include/i386-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
  /usr/include/i386-linux-gnu/bits/endian.h \
@@ -16,11 +16,10 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
  /usr/include/i386-linux-gnu/bits/select.h \
  /usr/include/i386-linux-gnu/bits/sigset.h \
  /usr/include/i386-linux-gnu/bits/time.h \
- /usr/include/i386-linux-gnu/bits/select2.h \
  /usr/include/i386-linux-gnu/sys/sysmacros.h \
  /usr/include/i386-linux-gnu/bits/pthreadtypes.h /usr/include/alloca.h \
  /usr/include/i386-linux-gnu/bits/stdlib.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h ../config.h m_argv.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h ../config.h m_argv.h \
  net_defs.h doomdef.h /usr/include/stdio.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
@@ -31,10 +30,10 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
  /usr/include/i386-linux-gnu/bits/string2.h \
  /usr/include/i386-linux-gnu/bits/string3.h /usr/include/strings.h \
  doomkeys.h doomtype.h /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/i386-linux-gnu/bits/posix1_lim.h \
  /usr/include/i386-linux-gnu/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/i386-linux-gnu/bits/posix2_lim.h \
@@ -55,7 +54,7 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
 
 /usr/include/i386-linux-gnu/gnu/stubs-32.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
 
 /usr/include/i386-linux-gnu/bits/waitflags.h:
 
@@ -85,8 +84,6 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
 
 /usr/include/i386-linux-gnu/bits/time.h:
 
-/usr/include/i386-linux-gnu/bits/select2.h:
-
 /usr/include/i386-linux-gnu/sys/sysmacros.h:
 
 /usr/include/i386-linux-gnu/bits/pthreadtypes.h:
@@ -95,7 +92,7 @@ d_dedicated.o: d_dedicated.c /usr/include/stdlib.h \
 
 /usr/include/i386-linux-gnu/bits/stdlib.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
 
 ../config.h:
 
@@ -137,15 +134,15 @@ doomtype.h:
 
 /usr/include/inttypes.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
 
 /usr/include/stdint.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
