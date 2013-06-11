@@ -4,11 +4,11 @@ p_ceilng.o: p_ceilng.c z_zone.h /usr/include/stdio.h \
  /usr/include/i386-linux-gnu/bits/wordsize.h \
  /usr/include/i386-linux-gnu/gnu/stubs.h \
  /usr/include/i386-linux-gnu/gnu/stubs-32.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h \
  /usr/include/i386-linux-gnu/bits/types.h \
  /usr/include/i386-linux-gnu/bits/typesizes.h /usr/include/libio.h \
  /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h \
  /usr/include/i386-linux-gnu/bits/stdio_lim.h \
  /usr/include/i386-linux-gnu/bits/sys_errlist.h \
  /usr/include/i386-linux-gnu/bits/stdio.h \
@@ -21,10 +21,10 @@ p_ceilng.o: p_ceilng.c z_zone.h /usr/include/stdio.h \
  /usr/include/i386-linux-gnu/bits/string3.h /usr/include/strings.h \
  doomkeys.h p_local.h r_local.h tables.h m_fixed.h r_data.h r_defs.h \
  d_think.h p_mobj.h doomdata.h doomtype.h /usr/include/inttypes.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h /usr/include/stdint.h \
  /usr/include/i386-linux-gnu/bits/wchar.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h \
- /usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h \
+ /usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/i386-linux-gnu/bits/posix1_lim.h \
  /usr/include/i386-linux-gnu/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/i386-linux-gnu/bits/posix2_lim.h \
@@ -48,7 +48,7 @@ z_zone.h:
 
 /usr/include/i386-linux-gnu/gnu/stubs-32.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stddef.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stddef.h:
 
 /usr/include/i386-linux-gnu/bits/types.h:
 
@@ -60,7 +60,7 @@ z_zone.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdarg.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdarg.h:
 
 /usr/include/i386-linux-gnu/bits/stdio_lim.h:
 
@@ -116,15 +116,15 @@ doomtype.h:
 
 /usr/include/inttypes.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include/stdint.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include/stdint.h:
 
 /usr/include/stdint.h:
 
 /usr/include/i386-linux-gnu/bits/wchar.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/limits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/limits.h:
 
-/usr/lib/gcc/i686-linux-gnu/4.6/include-fixed/syslimits.h:
+/usr/lib/gcc/i686-linux-gnu/4.6.1/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 

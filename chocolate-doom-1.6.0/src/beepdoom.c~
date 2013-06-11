@@ -5,9 +5,6 @@
 FILE* pipeFile;
 TMPL_varlist *variableList;
 player_t *mainPlayer;
-//Variables pour tester l'impact temporel de l'isntrumentation
-extern float endInstruFPS;
-extern clock_t endInstruCPU;
 
 char bufferPlayerId[20];
 char bufferPlayerHealth[4];
@@ -186,10 +183,6 @@ void duringLoop()
 		TMPL_write("template.xml", 0, 0, variableList, pipeFile, 0);
 	
 		TMPL_free_varlist(variableList);
-
-		//Time 
-		endInstruFPS = SDL_GetTicks();
-		endInstruCPU = clock();
 	}
 }
 
