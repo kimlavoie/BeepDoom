@@ -6,10 +6,15 @@
 #include "doomstat.h"
 #include "timestats.h"
 
-float startFPS, endFPS, length, fps; //Variables pour mesurer le temps à chaque tour de boucle
-char messFPS[3] ,messCPU[5],messAll[30];
-clock_t start, end; //Variables pour récupérer le temps d'utilisation du processeur.
+//Variables pour mesurer le temps à chaque tour de boucle
+float startFPS, endFPS, length, fps; 
+char messFPS[3] ,messCPU[5],messInstru[2], messAll[40];
+//Variables pour récupérer le temps d'utilisation du processeur.
+clock_t start, end; 
 double cpu_time_used;
+//Variables pour tester l'impact temporel de l'isntrumentation
+float endInstruFPS, lengthInstru, percentInstru;
+clock_t endInstruCPU;
 
 
 void timeBeginLoop()
@@ -42,6 +47,13 @@ void timeEndLoop()
     strcat(messAll,messFPS);
     strcat(messAll," CPU : ");
     strcat(messAll,messCPU);
-    players[consoleplayer].message = messAll; //TEST : On affiche le FPS et le CPU time sur l'interface du joueur en haut à gauche.
+   //On calcule l'impact temporel de l'instrumentation
+    lengthInstru = endInstruFPS - startFPS;
+    percentInstru = lengthInstru*100/length;
+    snprintf(messInstru,2,"%f",percentInstru);
+    strcat(messAll, "%instru : "); 
+    strcat(messAll, messInstru);
+    //TEST : On affiche le FPS et le CPU time sur l'interface du joueur en haut à gauche.
+    players[consoleplayer].message = messAll;    	
 }
 

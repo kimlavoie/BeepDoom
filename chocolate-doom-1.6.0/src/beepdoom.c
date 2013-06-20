@@ -6,6 +6,9 @@
 FILE* pipeFile;
 TMPL_varlist *variableList;
 player_t *mainPlayer;
+//Variables pour tester l'impact temporel de l'isntrumentation
+extern float endInstruFPS;
+extern clock_t endInstruCPU;
 
 char bufferPlayerId[20];
 char bufferPlayerHealth[4];
@@ -201,6 +204,10 @@ void duringLoop()
 	
 		SDL_SaveBMP(screenbuffer, bufferFilepath);
 		frame++;	
+
+		//Time 
+		endInstruFPS = SDL_GetTicks();
+		endInstruCPU = clock();
 	}
 }
 

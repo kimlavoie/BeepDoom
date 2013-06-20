@@ -417,7 +417,7 @@ void D_DoomLoop (void)
 
     while (1)
     {
-	
+	sleep(2);
 	// BEEPDOOM - function to start time counting	
 	timeBeginLoop();
 
