@@ -1,4 +1,5 @@
 <message>
+	<frame> <TMPL_VAR name="frame" /> </frame>
 	<player>
 		<id> <TMPL_VAR name="playerId" /> </id>
 		<health> <TMPL_VAR name="playerHealth" /> </health>

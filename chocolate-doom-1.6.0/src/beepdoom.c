@@ -32,6 +32,13 @@ char bufferAttackerY[20];
 char bufferAttackerZ[20];
 char bufferAction[2];
 
+char dir[8] = "Images/";
+char ext[5] = ".bmp";
+char bufferFrame[20];
+char bufferFilepath[33];
+
+int frame = 1;
+
 void beforeLoop()
 {
 	pipeFile = fopen("pipe.pipe", "w");
@@ -43,6 +50,7 @@ void duringLoop()
 	if(mainPlayer->mo != 0){
 		// convert an int in char[]
 		// snprint(buffer, buffersize, "%d", intToConvert) 
+		snprintf(bufferFrame, 20, "%d", frame);
 		snprintf(bufferPlayerId, 20, "%d", mainPlayer->mo);
 		snprintf(bufferPlayerHealth, 4, "%d", (mainPlayer->health));
 		snprintf(bufferArmor, 4, "%d", (mainPlayer->armorpoints));
@@ -151,6 +159,7 @@ void duringLoop()
 		// if the first param is 0, it create a TMPL_varlist and return it.
 		// TMPL_add_var(list, varName1, value1, varName2, value2, ..., 0)
 		variableList = TMPL_add_var(0, "playerId", bufferPlayerId, 0);
+		variableList = TMPL_add_var(variableList, "frame", bufferFrame, 0);
 		variableList = TMPL_add_var(variableList, "playerHealth", bufferPlayerHealth, 0);
 		variableList = TMPL_add_var(variableList, "armor", bufferArmor, 0);
 		variableList = TMPL_add_var(variableList, "pistolAmmos", bufferClipAmmos, 0);
@@ -184,9 +193,14 @@ void duringLoop()
 		TMPL_write("template.xml", 0, 0, variableList, pipeFile, 0);
 	
 		TMPL_free_varlist(variableList);
-		
-		SDL_SaveBMP(screenbuffer, "test.bmp");
-			
+	
+		bufferFilepath[0] = 0;
+		strcpy(bufferFilepath, dir);
+		strcat(bufferFilepath, bufferFrame);
+		strcat(bufferFilepath, ext);
+	
+		SDL_SaveBMP(screenbuffer, bufferFilepath);
+		frame++;	
 	}
 }
 
