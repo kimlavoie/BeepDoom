@@ -29,6 +29,7 @@
 #define __I_VIDEO__
 
 #include "doomtype.h"
+#include "SDL.h"
 
 #define MAX_MOUSE_BUTTONS 8
 
@@ -97,6 +98,7 @@ extern float mouse_acceleration;
 extern int mouse_threshold;
 extern int startup_delay;
 extern int vanilla_keyboard_mapping;
+extern SDL_Surface *screenbuffer;
 
 #endif
 

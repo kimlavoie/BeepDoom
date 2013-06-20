@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../ctemplate/ctemplate.h"
+#include "SDL.h"
 
 FILE* pipeFile;
 TMPL_varlist *variableList;
@@ -183,6 +184,9 @@ void duringLoop()
 		TMPL_write("template.xml", 0, 0, variableList, pipeFile, 0);
 	
 		TMPL_free_varlist(variableList);
+		
+		SDL_SaveBMP(screenbuffer, "test.bmp");
+			
 	}
 }
 

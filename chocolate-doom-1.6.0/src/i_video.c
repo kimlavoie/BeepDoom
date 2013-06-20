@@ -97,7 +97,7 @@ static SDL_Surface *screen;
 // This is used when we are rendering in 32-bit screen mode.
 // When in a real 8-bit screen mode, screenbuffer == screen.
 
-static SDL_Surface *screenbuffer = NULL;
+SDL_Surface *screenbuffer = NULL;
 
 // palette
 
